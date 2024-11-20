@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Razan - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: linear-gradient(to right, #f7f8fc, #ffffff);
+            margin: 20px;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding-bottom: 30px;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #1a1a2e;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ff4d4d;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 4px solid #ff4d4d;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 40px 30px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            border-left: 5px solid #ff4d4d;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .experience-item p {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .experience-item ul {
+            margin-top: 10px;
+            list-style: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skills span {
+            background-color: #e4e4e4;
+            color: #1a1a2e;
+            font-size: 0.9rem;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .skills span:hover {
+            background-color: #ff4d4d;
+            color: #fff;
+        }
+
+        /* Portfolio Section */
+        .portfolio-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-item img {
+    width: 100px;  /* Set the width */
+    height: 100px; /* Set the height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+
+        .portfolio-item .project-info {
+            flex: 1;
+        }
+
+        .portfolio-item h4 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .portfolio-item a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-item a:hover {
+            color: #1a1a2e;
+        }
+
+        /* Testimonials Section */
+        .testimonial-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-item .client {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #ff4d4d;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #1a1a2e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #fff;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQGbpL08VHlOBA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723187394594?e=2147483647&v=beta&t=GG010W5vISyDkiZifCHeqPRxkLwH0f0Te3pF46BNEkI" alt="Mohamed Razan" class="profile-picture">
+            <h1>Mohamed Razan</h1>
+            <p><strong>Email:</strong> <a href="mailto:mohamedrazanr@gmail.com">mohamedrazanr@gmail.com</a></p>
+            <p><strong>Phone:</strong> +94 076 688 5194</p>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>Freelance Developer <span style="font-weight: normal;">(Dec 2019 – Present)</span></h3>
+                <p>Developed mobile applications in Flutter, specializing in game development and providing support services to clients worldwide.</p>
+                <ul>
+                    <li>Developed and deployed multiple mobile applications using Flutter and Dart for diverse clients in various industries.</li>
+                    <li>Worked on app updates and enhancements for better user experience and functionality.</li>
+                    <li>Assisted clients with SEO, resume writing, and providing solutions for job search success.</li>
+                    <li>Ensured smooth deployment with testing and debugging, offering post-launch support.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Software Team Lead - Kumale <span style="font-weight: normal;">(Aug 2023 – Nov 2023)</span></h3>
+                <p>Led a team of developers to deliver quality web and mobile solutions with an emphasis on scalability and cloud integration.</p>
+                <ul>
+                    <li>Managed agile workflows and team collaboration to ensure timely delivery of projects.</li>
+                    <li>Developed cross-platform mobile apps and integrated them with cloud-based backend systems.</li>
+                    <li>Mentored junior developers, ensuring a high standard of coding practices and knowledge sharing.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Intern - Upgrade IB <span style="font-weight: normal;">(May 2022 – Nov 2022)</span></h3>
+                <p>Worked as a software developer intern, contributing to the development of mobile and web applications for client projects.</p>
+                <ul>
+                    <li>Assisted in the development of a mobile banking app, enhancing functionalities and improving the user interface.</li>
+                    <li>Collaborated with the design team to create responsive layouts and optimize app performance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+                <span>Flutter (10/10)</span>
+                <span>Dart  (10/10)</span>
+                <span>Firebase  (10/10)</span>
+                <span>MongoDB (10/8)</span>
+                <span>Node.js (10/5)</span>
+                <span>JavaScript  (10/3)</span>
+                <span>Pyhoon (10/2)</span>
+                <span>APIs (10/10)</span>
+                <span>React  (10/1)</span>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="section">
+            <h2 class="section-title">Portfolio</h2>
+
+            <div class="portfolio-item">
+                <img src="https://play-lh.googleusercontent.com/8rt7S4mq-4mXmSG2tf9ILGGMbGVPw4w3j19LGN6dYCgpE1yGUX5PkSXPMfu3lZttzJXw=w480-h960-rw" alt="Project 1">
+                <div class="project-info">
+                    <h4>Status Downloader</h4>
+                    <p>Status Downloader is a simple and fast app that allows users to download photos, videos, and GIFs shared as status updates on WhatsApp. With an easy-to-use interface, this app enables seamless saving of media files for offline viewing or sharing. The app ensures quick downloading with no hassle and supports all media types in WhatsApp status updates.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.radevelopers.wstatus" target=new>View Project</a>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://play-lh.googleusercontent.com/G97nNk8nJ-F5_ef5Wx3EdTFPK1YLA_J0SKhXd2DZCNeem7i-pZsRS60nVPsxofYpKfs=w480-h960-rw" alt="Project 2">
+                <div class="project-info">
+                    <h4>Mobile Banking App</h4>
+                    <p>This mobile banking app offers users a seamless and secure experience for managing their finances. Developed using Flutter, the app provides features such as real-time balance updates, fund transfers, and transaction history tracking. The user-friendly interface is designed for easy navigation, and the app is integrated with secure authentication protocols to ensure the privacy and security of user data.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.radevelopers.upgradebanq&hl=en" target=new>View Project</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+
+<div class="portfolio-item">
+    <img src="https://via.placeholder.com/480x960.png?text=Kumale+Meet+App" alt="Project 3">
+    <div class="project-info">
+        <h4>Kumale Meet App</h4>
+        <p>Kumale Meet is an app designed to help people connect and meet others with similar interests. Although it hasn't been released yet, this app aims to provide a platform for people to network and engage with others in their area. Stay tuned for the launch!</p>
+        <a href="#" target="_blank">View Project</a>
+    </div>
+</div>
+
+<div class="portfolio-item">
+    <img src="https://via.placeholder.com/480x960.png?text=Coach+Connect" alt="Project 4">
+    <div class="project-info">
+        <h4>Coach Connect</h4>
+        <p>Coach Connect is an app designed to facilitate communication between students, parents, and coaches. The app allows students and parents to stay updated on class schedules, upcoming events, and connect directly with coaches for feedback and guidance.</p>
+        <a href="#" target="_blank">View Project</a>
+    </div>
+</div>
+
+<div class="portfolio-item">
+    <img src="https://via.placeholder.com/480x960.png?text=AI-NeuroNest" alt="Project 5">
+    <div class="project-info">
+        <h4>AI-NeuroNest</h4>
+        <p>AI-NeuroNest is an innovative platform that offers a suite of AI-powered tools, including text-to-image generation, text-to-audio conversion, text-to-video creation, face swapping, and AI-based game character design. This app uses advanced AI to help users create engaging media content effortlessly.</p>
+        <a href="#" target="_blank">View Project</a>
+    </div>
+</div>
+
+            
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="section">
+            <h2 class="section-title">Testimonials</h2>
+
+            <div class="testimonial-item">
+                <p>"Mohamed Razan has been instrumental in helping us launch our mobile app. His knowledge of Flutter and attention to detail has been amazing!"</p>
+                <p class="client">John Doe, CEO of XYZ Inc.</p>
+            </div>
+
+            <div class="testimonial-item">
+                <p>"His professionalism and dedication to meeting deadlines are unmatched. I recommend him without hesitation!"</p>
+                <p class="client">Jane Smith, Product Manager at ABC Ltd.</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="section contact-form">
+            <h2 class="section-title">Contact Me</h2>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mohamed Razan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
